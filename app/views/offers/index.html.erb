@@ -1,0 +1,7 @@
+<h1>Available offers</h1>
+
+<ul>
+  <% @offers.each do |offer| %>
+  <li><%= "#{offer.area} for #{offer.price}" %></li>
+  <% end  %>
+</ul>
