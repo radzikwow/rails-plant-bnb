@@ -14,8 +14,12 @@
 
   <body>
     <%= render "shared/navbar" %>
-    <div class="container">
+    <% if params[:action] == 'home' %>
+      <%= render "shared/banner" %>
+    <% end %>
+    <div class="container mt-16">
       <%= yield %>
     </div>
+    <%= render "shared/footer" %>
   </body>
 </html>
