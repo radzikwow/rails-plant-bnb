@@ -1,6 +1,19 @@
-<%= render "shared/banner" %>
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<%= link_to("Sign in", new_user_session_path) %> |
-<%= link_to("Create an account", new_user_registration_path) %>
+<div class="title-container text-center mt-16">
+  <p>Please, select the following</p>
+  <div class="select-buttons">
+    <%# How to store input? %>
+    <div class="btn btn-flat">Start date</div>
+    <div class="btn btn-flat">End date</div>
+    <div class="btn btn-flat">Area</div>
+  </div>
+</div>
+
+
+
+<div class="cards">
+  <%= render "shared/card" %>
+  <%= render "shared/card" %>
+  <%= render "shared/card" %>
+  <%= render "shared/card" %>
+</div>
