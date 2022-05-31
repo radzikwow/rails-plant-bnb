@@ -3,15 +3,21 @@
   <p>Please, select the following</p>
   <div class="select-buttons">
     <%# How to store input? %>
-    <div class="btn btn-flat">Start date</div>
-    <div class="btn btn-flat">End date</div>
+    <div class="btn btn-flat">Date</div>
     <div class="btn btn-flat">Area</div>
   </div>
 </div>
 
 <div class="cards">
-  <%= render "shared/card" %>
-  <%= render "shared/card" %>
-  <%= render "shared/card" %>
-  <%= render "shared/card" %>
+  <% @offers.each do |offer| %>
+  <%= render "shared/card", offer: offer %>
+  <% end %>
 </div>
+
+
+
+
+  <%#= render "shared/card" %>
+  <%#= render "shared/card" %>
+  <%#= render "shared/card" %>
+  <%#= render "shared/card" %>

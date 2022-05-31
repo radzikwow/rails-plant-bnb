@@ -4,9 +4,23 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
-  def create
-    @offer = Offer.create(offer_params)
+  def new
+    @offer = Offer.new
     @offer.save
+  end
+
+  def create
+    @offer = Offer.new(offer_params)
+    @offer.user = current_user
+    if @offer.save
+      redirect_to offer_path(@offer)
+    else
+      render(:new)
+    end
+  end
+
+  def show
+    @offer = Offer.find(params[:id])
   end
 
   private

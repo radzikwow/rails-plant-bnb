@@ -3,11 +3,10 @@
   <%# <img src="https://i.pinimg.com/564x/0e/5a/59/0e5a593333842e06c69ac53ef8ea8f0d.jpg" /> %>
   <div class="card-trip-infos">
     <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
+      <h2><%= offer.area %></h2>
+      <p></p>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-    <%# <%= cl_image_tag("kkpx4d9s3fjduf4mhnkz", width: 400, height: 300, class="card-trip-user avatar-bordered") %> %>
+    <h2 class="card-trip-pricing"><%= offer.price %>$</h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
 </div>
