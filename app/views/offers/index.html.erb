@@ -2,6 +2,6 @@
 
 <ul>
   <% @offers.each do |offer| %>
-  <li><%= "#{offer.area} for #{offer.price}" %></li>
+  <li><%= "#{offer.area} for #{offer.price}" %> |  <%= link_to("Book this offer", new_offer_booking_path(offer.id)) %>  </li>
   <% end  %>
 </ul>
