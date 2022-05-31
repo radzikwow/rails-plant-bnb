@@ -4,9 +4,13 @@
     <p>Placeholder text</p>
   </div>
   <div class="banner-buttons">
-    <div class="btn btn-ghost">Look for a plantkeeper
-    </div>
-    <div class="btn btn-ghost">Offer plantkeeping
-    </div>
+    <%= link_to offers_path(@offer) do%>
+      <div class="btn btn-ghost">Look for a plantkeeper
+      </div>
+    <% end %>
+    <%= link_to new_offer_path(@offer) do%>
+      <div class="btn btn-ghost">Offer plantkeeping
+      </div>
+    <% end %>
   </div>
 </div>
