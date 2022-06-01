@@ -15,7 +15,18 @@
     <p><%= @offer.description %></p>
     <div class="bottom-right-container">
       <h3 class="text-center"><%= @offer.price %>$</h3>
-
+      <% if @offer.user_id == current_user.id || current_user.admin == true %>
+        <%= link_to(offer_path(@offer.id), method: :delete) do %>
+          <div class="btn btn-ghost">Delete offer
+          </div>
+        <% end %>
+      <% end %>
+      <% if @offer.user_id == current_user.id || current_user.admin == true %>
+        <%= link_to(offer_path(@offer.id), method: :edit) do %>
+          <div class="btn btn-ghost">Edit offer
+          </div>
+        <% end %>
+      <% end %>
       <%= link_to(new_offer_booking_path(@offer.id)) do %>
       <div class="btn btn-ghost">Book this offer
       </div>

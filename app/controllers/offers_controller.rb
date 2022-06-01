@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @offers = Offer.all
   end
@@ -17,6 +17,22 @@ class OffersController < ApplicationController
     else
       render(:new)
     end
+  end
+
+  def destroy
+    @offer = Offer.find(params[:id])
+    @offer.destroy
+    redirect_to root_path()
+  end
+
+  def edit
+    @offer = Offer.find(params[:id])
+  end
+
+  def update
+    @offer = Offer.find(params[:id])
+    @offer.update!(offer_params)
+    redirect_to offer_path(@offer)
   end
 
   def show
