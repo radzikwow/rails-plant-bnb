@@ -22,13 +22,22 @@
         <% end %>
       <% end %>
       <% if @offer.user_id == current_user.id || current_user.admin == true %>
-        <%= link_to(offer_path(@offer.id), method: :edit) do %>
+        <%= link_to(edit_offer_path(@offer.id)) do %>
           <div class="btn btn-ghost">Edit offer
           </div>
         <% end %>
       <% end %>
-      <%= link_to(new_offer_booking_path(@offer.id)) do %>
-      <div class="btn btn-ghost">Book this offer
+
+      <% unless @offer.user_id == current_user.id %>
+        <%= link_to(new_offer_booking_path(@offer.id)) do %>
+        <div class="btn btn-ghost">Book this offer
+        </div>
+        <% end %>
+      <% end %>
+
+
+      <%# <%= link_to(new_offer_booking_path(@offer.id)) do %>
+      <%# <div class="btn btn-ghost">Book this offer
       </div>
       <% end %>
     </div>
