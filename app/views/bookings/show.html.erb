@@ -2,9 +2,15 @@
   <h2>Your booking has been confirmed!</h2>
   <%= link_to("Delete this booking", offer_booking_path(@booking.offer.id, @booking.id), method: 'delete', data: { confirm: "Are you sure?" }) %>
 
-  <ul>
-    <li>Email: <%= @booking.user.email %> </li>
-    <li>Price: <%= @booking.offer.price %> </li>
-    <li>Price: <%= @booking.offer.area %> </li>
-  </ul>
+
+
+
+<ul>
+  <li>Email: <%= @booking.user.email %> </li>
+  <li>Price: <%= @booking.offer.price %> </li>
+  <li>Area: <%= @booking.offer.area %> </li>
+  <li>Start date - <%= @booking.start_date %></li>
+  <li>End date - <%= @booking.end_date %></li>
+</ul>
 </div>
+

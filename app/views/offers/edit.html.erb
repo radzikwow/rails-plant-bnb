@@ -1,0 +1,8 @@
+<h1>Edit the offer</h1>
+
+<%= simple_form_for(@offer) do |f| %>
+  <%= f.input :area, placeholder: @offer.area %>
+  <%= f.input :price, placeholder: @offer.price %>
+  <%= f.input :description, placeholder: @offer.description %>
+  <%= f.submit%>
+<% end %>
