@@ -1,8 +1,10 @@
-<h1>Book a plant keeping service</h1>
+<div class="container">
+  <h1>Book a plant keeping service</h1>
 
-<%= simple_form_for([@offer, @booking]) do |f| %>
-
+  <%= simple_form_for([@offer, @booking]) do |f| %>
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date, as: :date %>
   <%= f.submit %>
 <% end %>
+</div>
+

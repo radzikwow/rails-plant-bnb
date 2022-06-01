@@ -1,8 +1,10 @@
-<h1>Create a new plantkeeping offer</h1>
+<div class="container">
+  <h1>Create a new plantkeeping offer</h1>
 
-<%= simple_form_for(@offer) do |f| %>
-  <%= f.input :area, placeholder:"London"%>
-  <%= f.input :price, placeholder:"15" %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for(@offer) do |f| %>
+    <%= f.input :area, placeholder:"London"%>
+    <%= f.input :price, placeholder:"15" %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+</div>
