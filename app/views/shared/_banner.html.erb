@@ -1,14 +1,15 @@
 <div class="banner">
   <div class="banner-text">
-    <h1>Plant-BnB</h1>
+    <h1>Plant BnB</h1>
     <p>Placeholder text</p>
   </div>
   <div class="banner-buttons">
-    <%= link_to offers_path(@offer) do%>
-      <div class="btn btn-ghost">Look for a plantkeeper
+    <%# <%= link_to offers_path(@offer) do%>
+      <div class="btn btn-ghost" data-action="click->home#hideCards">Look for a plantkeeper
       </div>
-    <% end %>
-    <%= link_to new_offer_path(@offer) do%>
+
+    <%# <% end % %>
+    <%= link_to new_offer_path(@offer) do %>
       <div class="btn btn-ghost">Offer plantkeeping
       </div>
     <% end %>
