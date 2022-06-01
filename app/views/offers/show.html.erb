@@ -1,16 +1,25 @@
 <div class="container">
-  <div class="offer-details">
-    <div>
+  <%= link_to("< Back Home", root_path)%>
+  <div class="top-container">
+    <div class="top-left-container">
       <h1><%= @offer.area %></h1>
+      <img src="https://i.pinimg.com/564x/0e/5a/59/0e5a593333842e06c69ac53ef8ea8f0d.jpg" class="rounded-5"/>
     </div>
-    <div>
-      <img src="https://i.pinimg.com/564x/0e/5a/59/0e5a593333842e06c69ac53ef8ea8f0d.jpg" />
+
+    <div class="top-right-container">
+      <%# map thing %>
     </div>
-    <div>
-    <h2><%= @offer.price %>$</h2>
-    </div>
-    <div>
-      <h2><%= @offer.description %></h2>
+  </div>
+
+  <div class="bottom-container d-flex justify-content-between">
+    <p><%= @offer.description %></p>
+    <div class="bottom-right-container">
+      <h3 class="text-center"><%= @offer.price %>$</h3>
+
+      <%= link_to(new_offer_booking_path(@offer.id)) do %>
+      <div class="btn btn-ghost">Book this offer
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
