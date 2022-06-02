@@ -8,6 +8,6 @@ export default class extends Controller {
 
   hideCards(event){
     console.log(event)
-    this.cardTarget.classList.remove("d-none")
+    this.cardTarget.classList.toggle("d-none")
   }
 }
