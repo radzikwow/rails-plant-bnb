@@ -1,9 +1,27 @@
 class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  def index
+    if params[:query].present?
+      @offers = Offer.where("area ILIKE ?", "%#{params[:query]}%")
+    else
+      @offers = Offer.all
+    end
+  end
+
+  def show
+    @offer = Offer.find(params[:id])
+
+    # geocoder instances
+    @markers = [{
+      lat: @offer.latitude,
+      lng: @offer.longitude
+    }]
+  end
+
   def new
     @offer = Offer.new
-    @offer.save
+    # @offer.save
   end
 
   def create
@@ -32,9 +50,6 @@ class OffersController < ApplicationController
     redirect_to offer_path(@offer)
   end
 
-  def show
-    @offer = Offer.find(params[:id])
-  end
 
   private
 

@@ -10,3 +10,6 @@ application.register("hello", HelloController)
 
 import HomeController from "./home_controller"
 application.register("home", HomeController)
+
+import MapboxController from "./mapbox_controller"
+application.register("mapbox", MapboxController)

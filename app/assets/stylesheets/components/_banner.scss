@@ -1,26 +1,56 @@
 .banner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
   text-align: center;
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(230, 230, 230, 0.142)), url(https://www.reviewgeek.com/p/uploads/2020/11/b7f72457.png?width=1200);
+  // background-image: linear-gradient(rgba(0,0,0,0.4),rgba(230, 230, 230, 0.142));
   width: 100vw;
+  height: 600px;
 }
-
+.banner-content {
+  position: relative;
+  right: 0%;
+  top: 85%;
+}
 .banner h1 {
+  text-shadow: #000 2px 2px;
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 45px;
   font-weight: bold;
 }
-
+.carousel-div {
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 1000px;
+}
+.one {
+background-image: linear-gradient(rgba(0,0,0,0.4),rgba(230, 230, 230, 0.142)), url(https://images.pexels.com/photos/6508419/pexels-photo-6508419.jpeg);
+}
+.two {
+  background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/newscms/2018_46/2645071/181113-millenial-plant-carting-gardening-ac-515p.jpg), linear-gradient(rgba(0,0,0,0.4),rgba(230, 230, 230, 0.142));
+}
+.three {
+  background-image: url(https://www.michaelmurphy.ie/wp-content/uploads/2017/10/house-plants-decor-grouping-0213-1200x778.jpg), linear-gradient(rgba(0,0,0,0.4),rgba(230, 230, 230, 0.142));
+}
 .banner p {
-  font-size: 20px;
+  text-shadow: #000 2px 2px;
+  font-size: 30px;
   color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  opacity: .8;
 }
 
 
 // style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.reviewgeek.com/p/uploads/2020/11/b7f72457.png?width=1200);"
+
+//https://images.pexels.com/photos/6508419/pexels-photo-6508419.jpeg
+//https://media-cldnry.s-nbcnews.com/image/upload/newscms/2018_46/2645071/181113-millenial-plant-carting-gardening-ac-515p.jpg
+//https://www.michaelmurphy.ie/wp-content/uploads/2017/10/house-plants-decor-grouping-0213-1200x778.jpg
+
+//url(https://www.reviewgeek.com/p/uploads/2020/11/b7f72457.png?width=1200);
