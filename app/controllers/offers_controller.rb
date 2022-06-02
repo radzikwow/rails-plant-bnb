@@ -8,10 +8,10 @@ class OffersController < ApplicationController
     @offer = Offer.find(params[:id])
 
     # geocoder instances
-    @markers = {
+    @markers = [{
       lat: @offer.latitude,
       lng: @offer.longitude
-    }
+    }]
   end
 
   def new
