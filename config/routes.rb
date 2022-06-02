@@ -8,9 +8,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:show, :new, :create, :edit, :update, :destroy]
   end
 
-
-
-
   # root to: 'pages#home'
   # get "offers", to: "offers#index"
   # get "offers/new", to: "offers#new"
