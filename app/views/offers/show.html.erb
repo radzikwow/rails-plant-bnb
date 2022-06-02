@@ -6,10 +6,12 @@
       <img src="https://i.pinimg.com/564x/0e/5a/59/0e5a593333842e06c69ac53ef8ea8f0d.jpg" class="rounded-5"/>
     </div>
 
-    <div class="top-right-container">
-      <%# map thing %>
+    <%# map thing %>
+    <div style="width: 50%; height: 600px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
-  </div>
 
   <div class="bottom-container d-flex justify-content-between">
     <p><%= @offer.description %></p>
