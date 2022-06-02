@@ -2,8 +2,17 @@
   <h2>Your booking has been confirmed!</h2>
   <%= link_to("Delete this booking", offer_booking_path(@booking.offer.id, @booking.id), method: 'delete', data: { confirm: "Are you sure?" }) %>
 
+  <div class="container">
+    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Pick a date</h2>
 
-
+    <%= simple_form_for :search, method: "get" do |f| %>
+      <%= f.input :starts_at, input_html: {id: "range_start"} %>
+      <%= f.input :ends_at, input_html: {id: "range_end"} %>
+      <%= f.button :submit, "Submit", class: "btn btn-flat" %>
+    <% end %>
+    </div>
+  </div>
 
 <ul>
   <li>Email: <%= @booking.user.email %> </li>
@@ -13,4 +22,3 @@
   <li>End date - <%= @booking.end_date %></li>
 </ul>
 </div>
-
