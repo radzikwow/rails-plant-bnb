@@ -7,3 +7,7 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+
+import { initFlatpickr } from "../plugins/flatpickr";
+
+initFlatpickr();
