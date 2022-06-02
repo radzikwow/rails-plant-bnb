@@ -1,30 +1,5 @@
-<div data-controller="home">
+<div>
   <%= render "shared/banner" %>
-  <div class="container">
-  <div class="title-container text-center mt-16">
-    <p>Please, select the following</p>
-    <div class="select-buttons">
-      <%# How to store input? %>
-      <div class="btn btn-flat">Date</div>
-      <div class="btn btn-flat">Area</div>
-        <%# add search bar %>
-        <%= form_tag root_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search area"
-          %>
-          <%= submit_tag "Search", class: "btn btn-flat" %>
-        <% end %>
-    </div>
-  </div>
-
-  <div class="cards d-none" data-home-target="card">
-    <% @offers.each do |offer| %>
-    <%= render "shared/card", offer: offer %>
-    <% end %>
-  </div>
-</div>
 </div>
 
 

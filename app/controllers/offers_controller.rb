@@ -1,6 +1,14 @@
 class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  def index
+    if params[:query].present?
+      @offers = Offer.where("area ILIKE ?", "%#{params[:query]}%")
+    else
+      @offers = Offer.all
+    end
+  end
+
   def show
     @offer = Offer.find(params[:id])
 
