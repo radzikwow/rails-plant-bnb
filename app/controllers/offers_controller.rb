@@ -11,6 +11,7 @@ class OffersController < ApplicationController
 
   def show
     @offer = Offer.find(params[:id])
+    @booking = Booking.new
 
     # geocoder instances
     @markers = [{
@@ -37,7 +38,7 @@ class OffersController < ApplicationController
   def destroy
     @offer = Offer.find(params[:id])
     @offer.destroy
-    redirect_to root_path
+    redirect_to bookings_path
   end
 
   def edit
