@@ -2,8 +2,8 @@
   <%= link_to("< Back to offers", offers_path)%>
   <div class="top-container">
     <div class="top-left-container">
-      <img src="https://i.pinimg.com/564x/0e/5a/59/0e5a593333842e06c69ac53ef8ea8f0d.jpg" class="rounded-5"/>
       <h1><%= @offer.area %></h1>
+      <img src="https://i.pinimg.com/564x/0e/5a/59/0e5a593333842e06c69ac53ef8ea8f0d.jpg" class="rounded-5"/>
       <p><%= @offer.description %></p>
     </div>
 
@@ -31,14 +31,13 @@
               <% end %>
             <% end %>
 
-            <% unless @offer.user_id == current_user.id %>
-              <%= simple_form_for([@offer, @booking]) do |f| %>
-                <%= f.input :start_date, as: :string, input_html: {id: "range_start"}, placeholder: 'Start date' %>
-                <%= f.input :end_date, as: :string, input_html: {id: "range_end"}, placeholder: 'End date' %>
-                <%= f.button :submit, "Book now", class: "btn btn-ghost" %>
+              <% unless @offer.user_id == current_user.id %>
+                <%= simple_form_for([@offer, @booking]) do |f| %>
+                  <%= f.input :start_date, as: :string, input_html: {id: "range_start"}, placeholder: 'Start date' %>
+                  <%= f.input :end_date, as: :string, input_html: {id: "range_end"}, placeholder: 'End date' %>
+                  <%= f.button :submit, "Book now", class: "btn btn-ghost" %>
+                <% end %>
               <% end %>
-
-            <% end %>
             <%# <%= link_to(new_offer_booking_path(@offer.id)) do %>
             <%# <div class="btn btn-ghost">Book this offer
             </div>
