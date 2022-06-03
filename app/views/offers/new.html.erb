@@ -5,6 +5,7 @@
     <%= f.input :area, placeholder:"London"%>
     <%= f.input :price, placeholder:"15" %>
     <%= f.input :description %>
+    <%= f.input :file, as: :file, label: "Upload image", required: true %>
     <%= f.submit %>
   <% end %>
 </div>
