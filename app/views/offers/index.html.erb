@@ -2,16 +2,20 @@
   <div class="title-container text-center mt-16">
       <div class="select-buttons">
         <%# search bar %>
-        <%= form_tag offers_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search area"
-          %>
-          <%= submit_tag "Search", class: "btn btn-flat" %>
-        <% end %>
+        <div class="search-bar">
+          <%= form_tag offers_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Search area"
+            %>
+            </div>
+            <div class="search-button">
+            <%= submit_tag "Search", class: "btn btn-flat" %>
+          <% end %>
+        </div>
       </div>
-
+    </div>
     <div class="cards">
       <% @offers.each do |offer| %>
         <%= render "shared/card", offer: offer %>

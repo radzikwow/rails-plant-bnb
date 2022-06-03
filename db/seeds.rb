@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
  Offer.destroy_all
 
-user = User.create(email: "lalala@lala.com", password: "lalala")
+user = User.new(email: "admin@admin.com", admin: true, password: "admin!")
 
 Offer.create!(price: 15, area: "London", user: user, description: 'a very nice description for the plant-keeping')
 Offer.create!(price: 10, area: "Manchester", user: user, description: 'a very nice description for the plant-keeping')
