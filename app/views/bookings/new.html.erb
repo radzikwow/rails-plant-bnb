@@ -1,10 +1,15 @@
 <div class="container">
   <h1>Book a plant keeping service</h1>
 
-  <%= simple_form_for([@offer, @booking]) do |f| %>
-  <%= f.input :start_date, as: :date %>
-  <%= f.input :end_date, as: :date %>
-  <%= f.submit %>
-<% end %>
-</div>
+  <%# <%= simple_form_for([@offer, @booking]) do |f| %>
+    <%# <%= f.input :start_date, as: :date %>
+    <%# <%= f.input :end_date, as: :date %>
+    <%# <%= f.submit %>
+  <%# <% end  %>
 
+  <%= simple_form_for :search do |f| %>
+    <%= f.input :dates, input_html: {id: "range_start"}, placeholder: 'Select the dates' %>
+    <%= f.button :submit, "Submit", class: "btn btn-flat" %>
+  <% end %>
+
+</div>
