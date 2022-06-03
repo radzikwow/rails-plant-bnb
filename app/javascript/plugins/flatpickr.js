@@ -7,4 +7,5 @@ const initFlatpickr = () => {
     plugins: [new rangePlugin({ input: "#range_end"})]
   });
 
+}
 export { initFlatpickr };
