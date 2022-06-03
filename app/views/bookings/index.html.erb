@@ -13,7 +13,7 @@
     <div class="container-offers">
       <h2>My offers</h2>
       <ul class="list-inline">
-        <% current_user.offers.each do |offer| %>
+        <% @offers.each do |offer| %>
           <li> <%= offer.area %>, € <%= offer.price %> |  <%= link_to("Delete this offer", offer_path(offer.id), method: 'delete', data: { confirm: "Are you sure?" }) %> </li>
         <% end %>
       </ul>

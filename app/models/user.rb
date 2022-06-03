@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :offers
 
   has_many :bookings
-  has_many :offers, through: :bookings
+  # has_many :offers, through: :bookings
 end
