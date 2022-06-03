@@ -17,7 +17,6 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
     @offer = Offer.find(params[:offer_id])
     @booking = Booking.new
     @booking.start_date = params[:search]["select_dates"][0..9]
