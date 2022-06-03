@@ -1,11 +1,10 @@
 .top-container{
-  margin-top: 16px;
+  margin-top: 64px;
   display: flex;
   justify-content: space-evenly;
 }
 
 .top-left-container{
-  border: solid;
   width: 30%;
   img{
     width: 100%;
@@ -19,7 +18,8 @@
   align-items: center;
   margin-top: 32px;
   width: 350px;
-  height: 250px;
+  height: 295px;
+  padding: 16px 16px 32px 16px;
   box-shadow: 1px 1px 10px gray;
 }
 
@@ -29,4 +29,5 @@
 
 .back-to-offers {
   margin-top: 60px;
+
 }
