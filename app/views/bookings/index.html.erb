@@ -1,22 +1,24 @@
 <div class="container">
 
-  <div class="d-flex">
-    <div class="container-bookings ml-64">
-      <h2>My bookings</h2>
-      <ul class="list-inline">
-        <% @bookings.each do |booking| %>
-          <li> <%= booking.offer.area %>, € <%= booking.offer.price %> |  <%= link_to("Delete this booking", offer_booking_path(booking.offer.id, booking.id), method: 'delete', data: { confirm: "Are you sure?" }) %>  </li>
-        <% end %>
-      </ul>
-    </div>
+ <div class="container-all">
+    <div class="d-flex">
+      <div class="container-bookings">
+        <h2>My bookings</h2>
+        <ul class="list-inline">
+          <% @bookings.each do |booking| %>
+            <li> <%= booking.offer.area %>, € <%= booking.offer.price %>  <%= link_to("🗑️ Delete", offer_booking_path(booking.offer.id, booking.id), method: 'delete', data: { confirm: "Are you sure?" }, class: "text-decoration-none") %>  </li>
+          <% end %>
+        </ul>
+      </div>
 
-    <div class="container-offers">
-      <h2>My offers</h2>
-      <ul class="list-inline">
-        <% @offers.each do |offer| %>
-          <li> <%= offer.area %>, € <%= offer.price %> |  <%= link_to("Delete this offer", offer_path(offer.id), method: 'delete', data: { confirm: "Are you sure?" }) %> </li>
-        <% end %>
-      </ul>
+      <div class="container-offers">
+        <h2>My offers</h2>
+        <ul class="list-inline">
+          <% @offers.each do |offer| %>
+            <li> <%= offer.area %>, € <%= offer.price %> <%= link_to("🗑️ Delete", offer_path(offer.id), method: 'delete', data: { confirm: "Are you sure?" }, class: "text-decoration-none") %> </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 
